@@ -50,7 +50,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                 <?php if ($conf['tagline']): ?>
                     <p class="claim"><?php echo $conf['tagline'] ?></p>
                 <?php endif ?>
-
                 <ul class="a11y skip">
                     <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content'] ?></a></li>
                 </ul>
@@ -78,8 +77,10 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                                 'userpage'  => _tpl_action('userpage', 1, 'li', 1),
                                 'profile'   => tpl_action('profile', 1, 'li', 1),
                                 'register'  => tpl_action('register', 1, 'li', 1),
-                                'login'     => tpl_action('login', 1, 'li', 1),
+                                'login'     => tpl_action('login', 1, 'li', 1)
                             )); ?>
+                            <!-- get rid of the bar at the top -->
+                            <!-- 'login'     => tpl_action('login', 1, 'li', 1), removing the login tools event -->
                         </ul>
                     </div>
                 <?php endif ?>
