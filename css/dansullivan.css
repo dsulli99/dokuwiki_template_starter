@@ -6,3 +6,7 @@
   padding-left: 0 !important;
   background: none !important;
 }
+
+#dokuwiki__header .tools ul li a {
+    color: #101010;
+}
