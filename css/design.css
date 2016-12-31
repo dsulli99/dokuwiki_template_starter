@@ -108,7 +108,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    border-bottom: 1px solid __border__;
+    border-bottom: 0px solid __border__;
     background-color: __background_alt__;
     width: 100%;
 }
