@@ -388,6 +388,7 @@ progress {
     font: inherit;
     color: inherit;
     /* background-color destroys button look */
+    background-color: __background__;
     line-height: normal;
     margin: 0;
     vertical-align: middle;
