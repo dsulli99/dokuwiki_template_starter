@@ -90,7 +90,15 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                 <!-- SITE TOOLS -->
                 <div id="dokuwiki__sitetools">
                     <h3 class="a11y"><?php echo $lang['site_tools'] ?></h3>
-                    <?php tpl_searchform() ?>
+                    <?#php tpl_searchform() ?>
+                    <form action="/wiki/doku.php?id=wiki" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search">
+                      <div class="no">
+                        <input name="do" value="search" type="hidden">
+                        <input id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" type="text">
+                        <button type="submit" title="Search">Search</button>
+                        <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none;"></div>
+                      </div>
+                    </form>
                     <ul>
                       <?php 
                           if (!empty($_SERVER['REMOTE_USER'])) {

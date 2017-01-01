@@ -7,6 +7,21 @@
   background: none !important;
 }
 
-#dokuwiki__header .tools ul li a {
-    color: #101010;
+#dokuwiki__usertools ul li a {
+  color: #101010;
 }
+
+#dw__toc {
+  font-size: 10px;
+  line-height: 0px;
+}
+
+#dw__toc > h3 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 2px !important;
+}
+
