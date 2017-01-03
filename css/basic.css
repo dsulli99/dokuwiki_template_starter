@@ -315,7 +315,7 @@ kbd {
     text-align: left;
 }
 pre {
-    border: 1px solid __border__;
+    border: 1px  solid #262626;
     padding: 0 .2em;
     overflow: auto;
     word-wrap: normal;
@@ -395,6 +395,7 @@ progress {
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
+    border: 1px solid #646464;
 }
 
 input,

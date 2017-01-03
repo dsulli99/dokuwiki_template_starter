@@ -43,12 +43,23 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <div id="dokuwiki__header"><div class="pad">
 
             <div class="headings">
-                <h1><?php tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]"') ?></h1>
+                <?php if($ID == 'wiki') { ?>
+                  <?php #then we don't really want to do anything ?>
+                <?php } else { ?>
+                  <h1><?php i#tpl_link(wl(),'<','accesskey="h" title="[H]"')?></h1>
+                  <a href="./doku.php">
+                    <div style='height: 20px; width: 35px'>
+                      <img class="fillcontainer" src="./lib/tpl/dansullivan/images/alpha-back.svg">
+                    </div>
+                  </a>
+                <?php } ?>
+                <!-- header logo original -->
+                <?php #tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]"') ?>
                 <?php /* how to insert logo instead (if no CSS image replacement technique is used):
                         upload your logo into the data/media folder (root of the media manager) and replace 'logo.png' accordingly:
                         tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h" title="[H]"') */ ?>
                 <?php if ($conf['tagline']): ?>
-                    <p class="claim"><?php echo $conf['tagline'] ?></p>
+                  <p class="claim"><?php echo $conf['tagline'] ?></p>
                 <?php endif ?>
                 <ul class="a11y skip">
                     <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content'] ?></a></li>
